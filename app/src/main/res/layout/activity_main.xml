@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#987654"/>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="900dp"
+        android:layout_height="450dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/ll">
+
+        <com.example.griddemo.GridView
+            android:id="@+id/grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:linesX="9"
+            app:linesY="4"/>
+
+        <com.example.griddemo.DragView
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/bg">
+        </com.example.griddemo.DragView>
+    </RelativeLayout>
+
+</RelativeLayout>
